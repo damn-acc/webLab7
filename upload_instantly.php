@@ -1,8 +1,7 @@
 <?php
 date_default_timezone_set('Europe/Kyiv');
-header('Content-Type: application/json'); // Встановлюємо заголовок для JSON
+header('Content-Type: application/json');
 
-// Включення відображення помилок
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -27,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'message' => $data['message']
         ];
 
-        // Записуємо дані у файл
         if (file_put_contents($file, json_encode($currentData, JSON_PRETTY_PRINT))) {
             echo json_encode(['status' => 'success', 'message' => 'Event logged successfully']);
         } else {
