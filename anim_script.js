@@ -276,7 +276,7 @@ function renderEventTable(data) {
 
     if (data && data.length > 0) {
         const table = document.createElement('table');
-        table.innerHTML = '<tr><th>ID</th><th>Action</th><th>Time from events_log</th><th>Time from events_log_2</th></tr>';
+        table.innerHTML = '<tr><th>ID</th><th>Action</th><th>Time from server</th><th>Time from local storage</th></tr>';
 
         data.forEach(event => {
             const row = document.createElement('tr');
@@ -284,7 +284,7 @@ function renderEventTable(data) {
                 <td>${event.id}</td>
                 <td>${event.action}</td>
                 <td>${event.time_server}</td>
-                <td>${event.time_localstorage}</td>
+                <td>${event.time_local_storage}</td>
             `;
             table.appendChild(row);
         });

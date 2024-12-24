@@ -35,8 +35,8 @@ for ($index = 0; $index < $maxIndex; $index++) {
     $combinedLogs[] = [
         'id' => isset($events_log[$index]['id']) ? $events_log[$index]['id'] : null,
         'action' => isset($events_log[$index]['message']) ? $events_log[$index]['message'] : 'N/A',
-        'time_from_log' => isset($events_log[$index]['serverTime']) ? $events_log[$index]['serverTime'] : 'N/A',
-        'time_from_log_2' => isset($events_log_2[$index]['time']) ? $events_log_2[$index]['time'] : 'N/A',
+        'time_server' => isset($events_log[$index]['serverTime']) ? $events_log[$index]['serverTime'] : 'N/A',
+        'time_local_storage' => isset($events_log_2[$index]['time']) ? $events_log_2[$index]['time'] : 'N/A',
     ];
 }
 
